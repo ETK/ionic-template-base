@@ -1,0 +1,57 @@
+<ion-view align-title="center">
+  <ion-content class="login content-app" style="background-color: #edeff2;">
+    <div class="row" style="text-align=center">
+      <div class="col col col-center">
+        <img src="./img/xcess.png" class="imgLogo"/>
+      </div>
+    </div>
+    <form name="userForm" ng-submit="vm.login();">
+      <div class="row" style="text-align=center">
+        <div class="col col-center">
+          <div class="list list-inset">
+            <label class="item item-input">
+              <input type="email" placeholder="Email" lowercase ng-model="vm.model.email" ng-required="true">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Senha" ng-model="vm.model.password" ng-required="true">
+            </label>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col col-center textCenter">
+        <button class="button button-block btnLightBlue">
+          Entrar
+        </button>
+        <button class="button button-block btnDarkBlue" ng-click="vm.facebookLogin();">
+          Login com Facebook
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-center textCenter forgetPassword">
+        <a href="#/recover-password">Esqueci minha senha</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-center textCenter forgetPassword">
+        <button class="button button-block brnDarkGray" ng-click="vm.goRegister();">
+          Faça seu cadastro
+        </button>
+      </div>
+    </div>
+
+  </form>
+<errors message="vm.errors"></errors>
+
+</ion-content>
+</ion-view>
+<!--<div class="bar bar-footer login hideBarMenu">
+  <div class="row">
+    <div class="col col-center">
+      <button class="button button-block brnDarkGray" ng-click="vm.goRegister();">
+        Faça seu cadastro
+      </button>
+    </div>
+  </div>
+</div>-->

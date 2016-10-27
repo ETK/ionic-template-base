@@ -1,0 +1,38 @@
+<ion-view class="colorWhite" title="Home" align="left" hide-back-button="true">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon home"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-search home"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header home content-app" style="background-color: #edeff2;">
+    <div class="card">
+      <div class="item item-divider titleTable">
+        <label>Histórico de uso</label>
+      </div>
+      <div class="item item-divider" ng-show="!vm.model.history">
+        <label>Nenhum histórico a exibir</label>
+      </div>
+      <div class="item item-divider" ng-show="vm.model.history" ng-repeat="item in vm.model.history">
+        <label>Estabelecimento X</label>
+      </div>
+      <div class="item item-divider footerTable textCenter" ng-show="vm.model.history">
+        <a href="#/app/cars">Ver todos</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider titleTable">
+        <label>Locais favoritos</label>
+      </div>
+      <div class="item item-divider" ng-show="!vm.model.favoritePlaces">
+        <label>Nenhum local favorito a exibir</label>
+      </div>
+      <div class="item item-divider" ng-show="vm.model.favoritePlaces" ng-repeat="item in vm.model.favoritePlaces">
+        <label>Estabelecimento X</label>
+      </div>
+      <div class="item item-divider footerTable textCenter" ng-show="vm.model.favoritePlaces">
+        <a href="#/app/cars">Ver todos</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
